@@ -50,6 +50,17 @@ nav a {
 	position: relative;
 }
 
+.picture.left::before {
+	content: ' ';
+	background-color: #E5975F;
+	width: 374px;
+	height: 329px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
+
 .picture {
 	flex: 1;
 	margin: 0 20px;
@@ -57,10 +68,7 @@ nav a {
 }
 
 .picture img {
-	width: 400px;
-	height: 400px;
-	object-fit: cover;
-	
+	width: 100%;
 }
 
 #about-me {
@@ -111,11 +119,10 @@ nav a {
 }
 .gallery-item {
 	position: absolute;
-	width: 320px;
-	height: 320px;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
 	padding: .5em;
-
 }
 .mg-prev, .mg-next {
 	width: 30px;
@@ -286,12 +293,19 @@ ul.tags-bar {
 		left: 0;
 		z-index: -1;
 	}
+	
+	#about-me .intro {
+		width: 100%;
+	}
+	
 	.about-me__title{
 		text-align: center;
 		margin-top: 1em;
 	}
 	#services .container {
 		flex-direction: column;
+		z-index: 1; /* Garde les services au-dessus */
+
 	}
 	.service {
 		width: 100%;
@@ -304,7 +318,7 @@ ul.tags-bar {
 	}
 
 	#services .container::before{
-		width: 30%;
+		width: 26%;
 		height: 100%;
 		bottom: 0;
 		right: 0;
@@ -360,6 +374,11 @@ ul.tags-bar {
 	}
 	.picture {
 		width: 80%;
+	}
+
+	.picture img {
+		width: 100%;
+		height: auto;
 	}
 
 	blockquote { /* Je cache les citations sur mobile car elles prennent trop de place*/
