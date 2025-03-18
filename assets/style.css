@@ -57,7 +57,10 @@ nav a {
 }
 
 .picture img {
-	width: 100%;
+	width: 400px;
+	height: 400px;
+	object-fit: cover;
+	
 }
 
 #about-me {
@@ -108,10 +111,11 @@ nav a {
 }
 .gallery-item {
 	position: absolute;
-	width: 100%;
-	height: 100%;
+	width: 320px;
+	height: 320px;
 	object-fit: cover;
 	padding: .5em;
+
 }
 .mg-prev, .mg-next {
 	width: 30px;
