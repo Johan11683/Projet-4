@@ -5234,6 +5234,7 @@
 
     return false;
   };
+  
 
   const DefaultAllowlist = {
     // Global attributes allowed on any supplied element below.

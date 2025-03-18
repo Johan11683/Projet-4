@@ -120,7 +120,7 @@
             <div class="modal-content">
               <div class="modal-body">
                 ${navigation ? '<div class="mg-prev" style="cursor:pointer;">&lt;</div>' : ''}
-                <img class="lightboxImage img-fluid"/>
+                <img class="lightboxImage img-fluid" alt=""/>
                 ${navigation ? '<div class="mg-next" style="cursor:pointer;">&gt;</div>' : ''}
               </div>
             </div>
