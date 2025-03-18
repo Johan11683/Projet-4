@@ -90,7 +90,7 @@ nav a {
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #BEB45A;
+	background-color: #5B5824;
 }
 .nav-pills .nav-link {
 	color: #000
@@ -254,7 +254,7 @@ ul.tags-bar {
 }
 
 .nav-link.active-tag {
-	background-color: #BEB45A; /* Couleur de fond active */
+	background-color: #5B5824; /* Couleur de fond active */
 	color: white; /* Couleur du texte active */
 	border-radius: 0;
   }
