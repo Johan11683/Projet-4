@@ -123,6 +123,11 @@ nav a {
 	padding-bottom: 100%;
 
 }
+.d-block {
+	width: 440px;
+	height: 440px;
+}
+
 .gallery-item {
 	position: absolute;
 	width: 100%;
