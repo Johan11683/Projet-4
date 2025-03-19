@@ -138,20 +138,28 @@
     },
     filterByTag() {
       if ($(this).hasClass("active-tag")) return;
-
+    
       $(".active-tag").removeClass("active active-tag");
       $(this).addClass("active-tag");
-
+    
       const tag = $(this).data("images-toggle");
-      $(".gallery-item").each(function() {
-        const $item = $(this);
-        const $parentColumn = $item.parents(".item-column");
-        if (tag === "all" || $item.data("gallery-tag") === tag) {
-          $parentColumn.show();
-        } else {
-          $parentColumn.hide();
-        }
+      const $columns = $(".item-column");
+    
+      // On cache tout immédiatement sans animation
+      $columns.css({ visibility: "hidden", opacity: 0 }).hide();
+    
+      requestAnimationFrame(() => {
+        let $toShow = tag === "all" ? $columns : $columns.has(`[data-gallery-tag="${tag}"]`);
+        
+        // Applique l'animation sur chaque élément avec un délai de 0.1s entre chaque
+        $toShow.each(function(index) {
+          setTimeout(() => {
+            $(this).css({ visibility: "visible", display: "block" })
+              .animate({ opacity: 1 }, 500); // Animation fluide
+          }, index * 100); // Délai de 0.1s entre chaque image
+        });
       });
-    }
+    }    
+    
   };
 })(jQuery);
