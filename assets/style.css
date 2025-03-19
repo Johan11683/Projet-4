@@ -68,7 +68,8 @@ nav a {
 }
 
 .picture img {
-	width: 100%;
+	width: 480px;
+	height: 480px;
 }
 
 #about-me {
