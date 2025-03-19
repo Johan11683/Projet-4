@@ -67,9 +67,14 @@ nav a {
 	z-index: 0;
 }
 
+.d-block {
+	width: 100%;
+	height: auto;
+}
+
 .picture img {
 	width: 480px;
-	height: 480px;
+	height: auto;
 }
 
 #about-me {
