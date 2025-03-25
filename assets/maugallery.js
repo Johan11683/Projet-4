@@ -186,6 +186,8 @@
       // Cache immédiatement les éléments sans animation
       $columns.css({ visibility: "hidden", opacity: 0 }).hide();
 
+      // requestAnimationFrame() est utilisé ici pour garantir que l'animation commence après la mise à jour complète du DOM
+      // Cela permet d'éviter les problèmes de performance en synchronisant l'animation avec le taux de rafraîchissement du navigateur.
       requestAnimationFrame(() => {
         let $toShow = tag === "all" ? $columns : $columns.has(`[data-gallery-tag="${tag}"]`);
 
